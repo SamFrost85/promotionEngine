@@ -5,7 +5,7 @@
 
     <!-- A simple bean definition -->
     <bean id = "threeOfTypeA" class = "com.company.engine.promotions.ThreeOfTheSame">
-<!--        need constructor-->
+        <property name="type" value="A"></property>
     </bean>
 
 </beans>

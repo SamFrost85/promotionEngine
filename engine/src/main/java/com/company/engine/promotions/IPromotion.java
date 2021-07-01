@@ -1,6 +1,8 @@
 package com.company.engine.promotions;
 
+import com.company.engine.data.Cart;
+
 public interface IPromotion {
 
-    boolean isApplicable();
+    boolean isApplicable(Cart cart);
 }
