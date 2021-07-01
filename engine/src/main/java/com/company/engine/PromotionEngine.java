@@ -3,6 +3,7 @@ package com.company.engine;
 import com.company.engine.data.Cart;
 import com.company.engine.promotions.IPromotion;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 

@@ -1,19 +1,19 @@
 <beans xmlns = "http://www.springframework.org/schema/beans"
        xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
        xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
        http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!-- A simple bean definition -->
     <bean id = "threeOfTypeA" class = "com.company.engine.promotions.ThreeOfTheSame">
-        <property name="type" value="A"></property>
-        <property name="discountSum" value="20"></property>
+        <constructor-arg  value="A"></constructor-arg>
+        <constructor-arg name="discountSum" value="20"></constructor-arg>
     </bean>
 
     <util:list id="promotions" value-type="com.company.engine.promotions.IPromotion">
         <ref bean="threeOfTypeA"/>
     </util:list>
+    <bean id ="promotionEngine" class = "com.company.engine.PromotionEngine"/>
 
 </beans>
