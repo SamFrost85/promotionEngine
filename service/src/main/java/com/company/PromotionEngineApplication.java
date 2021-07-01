@@ -13,4 +13,15 @@ public class PromotionEngineApplication {
         SpringApplication.run(PromotionEngineApplication.class, args);
     }
 
+
+    /*
+    Time's up.
+    Adding the other promotions is easy enough now that the whole engine is up.
+    A few things I'd like to add are:
+    - SLF4J logging
+    - integration test with Spring MVC
+    - Dockerize the engine and have 3 replicas
+
+
+     */
 }
