@@ -4,5 +4,7 @@ import com.company.engine.data.Cart;
 
 public interface IPromotion {
 
-    boolean isApplicable(Cart cart);
+    boolean isApplicable (Cart cart);
+
+    void applyPromotion (Cart cart);
 }

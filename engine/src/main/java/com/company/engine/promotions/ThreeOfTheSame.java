@@ -30,6 +30,12 @@ public class ThreeOfTheSame implements IPromotion {
             }
         }
         return itemCount >= 3;
+    }
+
+    @Override
+    public void applyPromotion(Cart cart) {
 
     }
+
+
 }
