@@ -9,6 +9,7 @@
     <!-- A simple bean definition -->
     <bean id = "threeOfTypeA" class = "com.company.engine.promotions.ThreeOfTheSame">
         <property name="type" value="A"></property>
+        <property name="discountSum" value="20"></property>
     </bean>
 
     <util:list id="promotions" value-type="com.company.engine.promotions.IPromotion">

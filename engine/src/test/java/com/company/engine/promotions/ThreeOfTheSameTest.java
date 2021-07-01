@@ -12,7 +12,7 @@ public class ThreeOfTheSameTest {
 
     private String promotionAllowedType = "A";
 
-    private ThreeOfTheSame promotion = new ThreeOfTheSame(promotionAllowedType);
+    private ThreeOfTheSame promotion = new ThreeOfTheSame(promotionAllowedType, new BigDecimal("20"));
 
 
     // better test can be done usine parametrized Unit tests. Can implement if there is time.
