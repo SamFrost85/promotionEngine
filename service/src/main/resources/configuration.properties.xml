@@ -6,14 +6,21 @@
        http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="threeOfTypeA" class="com.promotion.engine.promotions.ThreeOfTheSamePromotion">
+    <bean id="threeOfTypeA" class="com.promotion.engine.promotions.NumberOfTheSamePromotion">
         <constructor-arg value="A"></constructor-arg>
-        <constructor-arg name="discountSum" value="20"></constructor-arg>
+        <constructor-arg name="discountSum" value="3"></constructor-arg>
+    </bean>
+
+    <bean id="twoOfTypeB" class="com.promotion.engine.promotions.NumberOfTheSamePromotion">
+        <constructor-arg value="B"></constructor-arg>
+        <constructor-arg name="discountSum" value="15"></constructor-arg>
+        <constructor-arg name="numberToApplyPromotion" value="2"></constructor-arg>
     </bean>
 
     <util:list id="promotions" value-type="com.promotion.engine.promotions.IPromotion">
         <ref bean="threeOfTypeA"/>
     </util:list>
+
     <bean id="promotionEngine" class="com.promotion.engine.PromotionEngine"/>
 
 </beans>
