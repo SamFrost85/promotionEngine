@@ -27,7 +27,12 @@ public final class ThreeOfTheSamePromotion implements IPromotion {
 
     @Override
     public boolean isApplicable(Cart cart) {
-        return true;
+        if (cart == null || cart.getItems() == null) {
+            // log null cart here
+            return false;
+        }
+        var itemCount = cart.getItems().stream().filter(x -> type.equals(x.getType())).count();
+        return itemCount >= 3;
     }
 
     @Override
