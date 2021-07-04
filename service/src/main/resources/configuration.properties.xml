@@ -8,7 +8,7 @@
 
     <bean id="threeOfTypeA" class="com.promotion.engine.promotions.NumberOfTheSamePromotion">
         <constructor-arg value="A"></constructor-arg>
-        <constructor-arg name="discountSum" value="3"></constructor-arg>
+        <constructor-arg name="discountSum" value="30"></constructor-arg>
         <constructor-arg name="numberToApplyPromotion" value="2"></constructor-arg>
     </bean>
 
