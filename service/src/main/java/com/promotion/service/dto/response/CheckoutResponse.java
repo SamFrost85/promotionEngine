@@ -1,4 +1,4 @@
-package com.promotion.engine.dto.response;
+package com.promotion.service.dto.response;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.promotion.engine;
+package com.promotion.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

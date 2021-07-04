@@ -1,4 +1,4 @@
-package com.promotion.engine.dto.request;
+package com.promotion.service.dto.request;
 
 /**
  * Represents a checkout request

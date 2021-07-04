@@ -1,7 +1,7 @@
-package com.promotion.engine.controller;
+package com.promotion.service.controller;
 
-import com.promotion.engine.dto.request.CheckoutRequest;
-import com.promotion.engine.dto.response.CheckoutResponse;
+import com.promotion.service.dto.request.CheckoutRequest;
+import com.promotion.service.dto.response.CheckoutResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
