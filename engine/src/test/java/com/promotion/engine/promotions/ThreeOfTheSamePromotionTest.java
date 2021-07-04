@@ -2,18 +2,16 @@ package com.promotion.engine.promotions;
 
 import com.promotion.engine.AbstractTest;
 import com.promotion.engine.data.Cart;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ThreeOfTheSamePromotionTest extends AbstractTest {
 
-    private ThreeOfTheSamePromotion promotion = new ThreeOfTheSamePromotion("A", new BigDecimal(50));
+    private ThreeOfTheSamePromotion promotion = new ThreeOfTheSamePromotion("A", new BigDecimal(20));
 
     @Test
     public void promotionIsValidTest() {
@@ -41,8 +39,8 @@ public class ThreeOfTheSamePromotionTest extends AbstractTest {
     public void promotionAppliedTest() {
         var cart = generateTestCart("A", "C", "A", "A");
         promotion.applyPromotion(cart);
-
-        Assertions.fail("fix your test");
+        BigDecimal expectedTotal = new BigDecimal(180); // 50 each minus 20 discount
+        assertEquals(expectedTotal, cart.getTotal(), "The total applied is not correct");
     }
 
 

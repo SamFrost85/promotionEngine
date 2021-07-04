@@ -1,6 +1,9 @@
 package com.promotion.engine.promotions;
 
 import com.promotion.engine.data.Cart;
+import com.promotion.engine.data.CartItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 
@@ -10,6 +13,7 @@ import java.math.BigDecimal;
  */
 public final class ThreeOfTheSamePromotion implements IPromotion {
 
+    Logger log = LoggerFactory.getLogger(ThreeOfTheSamePromotion.class);
     /**
      * The specified type for this promotion
      */
@@ -28,7 +32,7 @@ public final class ThreeOfTheSamePromotion implements IPromotion {
     @Override
     public boolean isApplicable(Cart cart) {
         if (cart == null || cart.getItems() == null) {
-            // log null cart here
+            log.debug("null or empty cart");
             return false;
         }
         var itemCount = cart.getItems().stream().filter(x -> type.equals(x.getType())).count();
@@ -37,6 +41,8 @@ public final class ThreeOfTheSamePromotion implements IPromotion {
 
     @Override
     public void applyPromotion(Cart cart) {
-
+        log.debug("Applying promotion of £{}", discountSum);
+        CartItem promotionItem = new CartItem(type, discountSum);
+        cart.getItems().add(promotionItem);
     }
 }
