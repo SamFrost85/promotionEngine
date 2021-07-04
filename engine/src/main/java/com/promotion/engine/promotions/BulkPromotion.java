@@ -47,7 +47,7 @@ public final class BulkPromotion implements IPromotion {
                 return false;
             }
         }
-
+ // Log promotion applicable
         return true;
     }
 
