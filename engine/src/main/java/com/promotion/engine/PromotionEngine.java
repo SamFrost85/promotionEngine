@@ -25,7 +25,7 @@ public class PromotionEngine {
         for (IPromotion promotion : promotions) {
             if (promotion.isApplicable(cart)) {
                 promotion.applyPromotion(cart);
-                return;
+                return; // removing this return will apply multiple promotions if we want to do that
             }
         }
     }

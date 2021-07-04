@@ -47,6 +47,8 @@ public final class NumberOfTheSamePromotion implements IPromotion {
 
     @Override
     public void applyPromotion(Cart cart) {
+        // if we want to be able to reapply the same promotion to the cart, it will suffice to check how many types
+        // A are using the module and reapply the promotion until satisfied
         log.debug("Applying promotion of £{}", discountSum);
         CartItem promotionItem = new CartItem("Discount", discountSum);
         cart.getItems().add(promotionItem);
