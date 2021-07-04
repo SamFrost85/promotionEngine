@@ -9,6 +9,7 @@
     <bean id="threeOfTypeA" class="com.promotion.engine.promotions.NumberOfTheSamePromotion">
         <constructor-arg value="A"></constructor-arg>
         <constructor-arg name="discountSum" value="3"></constructor-arg>
+        <constructor-arg name="numberToApplyPromotion" value="2"></constructor-arg>
     </bean>
 
     <bean id="twoOfTypeB" class="com.promotion.engine.promotions.NumberOfTheSamePromotion">
@@ -17,8 +18,21 @@
         <constructor-arg name="numberToApplyPromotion" value="2"></constructor-arg>
     </bean>
 
+
+    <util:list id="cAndD" value-type="java.lang.String">
+        <value>C</value>
+        <value>D</value>
+    </util:list>
+
+    <bean id="CandDProducts" class="com.promotion.engine.promotions.BulkPromotion">
+        <constructor-arg ref="cAndD"></constructor-arg>
+        <constructor-arg name="discountSum" value="5"></constructor-arg>
+    </bean>
+
     <util:list id="promotions" value-type="com.promotion.engine.promotions.IPromotion">
         <ref bean="threeOfTypeA"/>
+        <ref bean="twoOfTypeB"/>
+        <ref bean="CandDProducts"/>
     </util:list>
 
     <bean id="promotionEngine" class="com.promotion.engine.PromotionEngine"/>
